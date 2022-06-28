@@ -1,14 +1,13 @@
-<a href="#" class="list-group-item clearfix" (click)="onSelected()">
+<a class="list-group-item clearfix my-2" style="cursor: pointer;border-radius: 0.5rem;" [routerLink]="index" routerLinkActive="active">
   <div class="row">
     <div class="col-9">
-      <div class="pull-left">
-        <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-        <p class="list-group-item-text">{{ recipe.description }}</p>
-      </div>
+      <h4 class="list-group-item-heading m-2" style="cursor: pointer;">{{ recipe.name }}</h4>
+      <p class="list-group-item-text m-2" style="cursor: pointer;">{{ recipe.description }}</p>
     </div>
     <div class="col-3">
-      <span class="pull-right">
-        <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-responsive" style="max-height: 50px;">
+      <span>
+        <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-responsive"
+          style="max-height: 65px; cursor: pointer;">
       </span>
     </div>
   </div>

@@ -1,21 +1,21 @@
 <!-- <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#" class="navbar-brand">Recipe Book</a>
+      <a  class="navbar-brand">Recipe Book</a>
     </div>
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#" (click)="onSelect('recipe')">Recipes</a></li>
-        <li><a href="#" (click)="onSelect('shopping-list')">Shopping List</a></li>
+        <li><a  (click)="onSelect('recipe')">Recipes</a></li>
+        <li><a  (click)="onSelect('shopping-list')">Shopping List</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown" appDropdown>
-          <a href="#" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+          <a  class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Save Data</a></li>
-            <li><a href="#">Fetch Data</a></li>
-          </ul>
+            <li><a >Save Data</a></li>
+            <li><a >Fetch Data</a></li>
+          </ul>\
         </li>
       </ul>
     </div>
@@ -24,23 +24,28 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
   <div class="container-fluid">
-      <a class="navbar-brand" href="#" style="font-size: 30px;">RecipeBook</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse mx-5 p-2" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#" (click)="onSelect('recipe')">Recipe</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#" (click)="onSelect('shopping-list')">Shopping List</a>
-              </li>
-          </ul>
-          <!-- <span class="navbar-text dropdown-toggle">
-              Manage
-          </span> -->
-          <a href="#" class="navbar-text dropdown-toggle" role="button" style="cursor: pointer; text-decoration: none;">Manage</a>
-      </div>
+    <a class="navbar-brand" style="font-size: 30px;">RecipeBook</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse mx-5 p-2" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="/recipes">Recipe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/shopping-list">Shopping List</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav dropdown">
+        <li type="button" class="dropdown-toggle" data-bs-toggle="dropdown">
+          Manage
+        </li>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" style="cursor: pointer;">Save Data</a></li>
+          <li><a class="dropdown-item" style="cursor: pointer;">Fetch Data</a></li>
+        </ul>
+      </ul>
+    </div>
   </div>
