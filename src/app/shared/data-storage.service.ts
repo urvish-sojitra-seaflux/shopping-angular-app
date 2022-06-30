@@ -26,8 +26,8 @@ export class DataStorageService {
     return this.http
       .get<Recipe[]>(
         'https://http-request-d9707-default-rtdb.firebaseio.com//recipes.json'
-      )
-      .pipe(
+
+      ).pipe(
         map(recipes => {
           return recipes.map(recipe => {
             return {
@@ -39,6 +39,7 @@ export class DataStorageService {
         tap(recipes => {
           this.recipeService.setRecipes(recipes);
         })
-      )
+      );
+
   }
 }

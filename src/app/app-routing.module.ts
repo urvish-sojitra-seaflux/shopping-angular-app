@@ -9,7 +9,7 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/recipes', pathMatch: 'full' },
+  { path: 'auth', component: AuthComponent },
   {
     path: 'recipes', component: RecipesComponent, children: [
       { path: '', component: RecipeStartComponent },
@@ -18,7 +18,6 @@ const appRoutes: Routes = [
       { path: ':id/edit', component: RecipeEditComponent },
     ]
   },
-  { path: 'auth', component: AuthComponent },
   { path: 'shopping-list', component: ShoppingListComponent },
 
 ];
